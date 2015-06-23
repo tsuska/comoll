@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Šuska</title>
+    <script src="/socket.io/socket.io.js"></script>
+  </head>
+  <body>
+    <div id="url"></div>
+    <script>
+      var socket = io();
+
+      socket.on('suska', function(doc) {
+        document.getElementById('url').innerHTML = doc.URL;
+      });
+    </script>
+  </body>
+</html>
